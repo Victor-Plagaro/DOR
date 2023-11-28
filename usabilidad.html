@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="usabilidad.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Principios de usabilidad</title>
+    <script src="usabilidad.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.PNG" alt="logo de la empresa">
+                </span>
+                <div class="text header-text">
+                    <span class="nombreEmpresa">Listado</span>
+                    <span class="eslogan">Más tiempo. Más felicidad</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggleP'></i>
+        </header>
+
+        <div class="mennu-bar">
+            <div class="menu">
+                <li>
+                    <i class='bx bx-search icons'></i>
+                    <input type="search" name="busqueda" placeholder="Búsqueda...">
+                </li>
+                <ul class="mnu-links">
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-home-alt icons' ></i>
+                            <span class="text nav-text">Inicio</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="container">
+            <div class="title-buttons">
+                <h2>Lista de Tareas</h2>
+                <div class="actions-bar-buttons">
+                    <button class="actions-buttons" onclick="agregarTarea(titulo, imagen, descripcion)">Agregar</button>
+                    <button class="actions-buttons">Editar</button>
+                    <button class="actions-buttons">Eliminar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

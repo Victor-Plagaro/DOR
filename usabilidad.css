@@ -1,0 +1,170 @@
+/*Google Font Import - Poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Poppins:wght@300;400;500;700&display=swap');
+
+/*Reseteo del CSS en los navegadores*/
+:root{
+    /*--- Colors ---*/
+    --body-color:#E4E9F7;
+    --sidebar-color:#FFF;
+    --primary-color:#FFF584;
+    --primary-color-light:#F6F5FF;
+    --toggle-color:#DDD;
+    --text-color:#707070;
+
+    /*--- Transition ---*/
+    --tran-03: all 0.2 ease;
+    --tran-03: all 0.3 ease;
+    --tran-04: all 0.4 ease;
+    --tran-05: all 0.5 ease;
+}
+/* Aspectos globales*/ 
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+.sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.sidebar .image{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+/* Barra lateral de navegacion*/
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background-color: var(--sidebar-color);
+}
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.sidebar li .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+.sidebar li .text{
+    color: #707070;
+}
+.sidebar header{
+    position: relative;
+}
+.image-text img{
+    width: 60px;
+    border-radius: 6px;
+}
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+header .image-text .header-text{
+    display: flex;
+    flex-direction: column;
+}
+.header-text .nombreEmpresa{
+    font-weight: 600;
+}
+.header-text .eslogan{
+    margin-top: -2px;
+}
+.sidebar header .toggleP{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 22px;
+}
+.sidebar li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+/* --- Main Container ---*/
+#container{
+    position: fixed;
+    right: 0;
+    width: calc(100vw - 250px);
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.title-buttons{
+    display: flex;
+    flex: 2;
+    padding: 0px 60px 0px 0px;
+    align-items: center;
+}
+.title-buttons .actions-bar-buttons{
+    gap: 25px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.actions-buttons{
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.actions-buttons:first-child{
+    background-color: var(--primary-color);
+}
+.actions-buttons:first-child:hover{
+    background-color: #fffac4;
+    box-shadow: 0px 0px 30px 7px #fff584;
+}
+.actions-buttons:nth-child(2){
+    background-color: rgb(96, 183, 255);
+}
+.actions-buttons:nth-child(2):hover{
+    background-color: rgb(189, 225, 255);
+    box-shadow: 1px 1px 30px 7px rgb(136, 202, 255);
+}
+.actions-buttons:last-child{
+    background-color: rgb(255, 93, 93);
+}
+.actions-buttons:last-child:hover{
+    background-color: rgb(255, 177, 177);
+    box-shadow: 1px 1px 30px 7px rgb(255, 136, 136);
+}
+@media (width > 1244px) {
+    body{
+        .title-buttons .actions-bar-buttons{
+            gap: 40px;
+        }
+    }
+}
