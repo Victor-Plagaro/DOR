@@ -7,6 +7,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Principios de usabilidad</title>
     <script src="usabilidad.js"></script>
+
 </head>
 <body>
     <nav class="sidebar">
@@ -46,11 +47,22 @@
             <div class="title-buttons">
                 <h2>Lista de Tareas</h2>
                 <div class="actions-bar-buttons">
-                    <button class="actions-buttons" onclick="agregarTarea(titulo, imagen, descripcion)">Agregar</button>
-                    <button class="actions-buttons">Editar</button>
-                    <button class="actions-buttons">Eliminar</button>
+                    <button class="actions-buttons" id="agregar">Agregar</button>
                 </div>
             </div>
+        </section>
+
+        <section id="listado-tareas-grid"></section>
+
+        <div id="overlay"></div>
+        <section id="modal">
+            <h2>Agregar Tarea</h2>
+            <label for="title">Título:</label>
+            <input type="text" id="title" required><br>
+            <label for="description">Descripción:</label>
+            <textarea id="description" required></textarea><br>
+            <button id="guardarTarea">Guardar Tarea</button>
+            <button id="btnClose" onclick="cerrarModal()">Cerrar</button>
         </section>
     </main>
 </body>

@@ -141,30 +141,105 @@ header .image-text .header-text{
     font-weight: 600;
 }
 .actions-buttons:first-child{
-    background-color: var(--primary-color);
-}
-.actions-buttons:first-child:hover{
-    background-color: #fffac4;
-    box-shadow: 0px 0px 30px 7px #fff584;
-}
-.actions-buttons:nth-child(2){
     background-color: rgb(96, 183, 255);
 }
-.actions-buttons:nth-child(2):hover{
+.actions-buttons:first-child:hover{
     background-color: rgb(189, 225, 255);
     box-shadow: 1px 1px 30px 7px rgb(136, 202, 255);
 }
-.actions-buttons:last-child{
-    background-color: rgb(255, 93, 93);
-}
-.actions-buttons:last-child:hover{
-    background-color: rgb(255, 177, 177);
-    box-shadow: 1px 1px 30px 7px rgb(255, 136, 136);
-}
+
 @media (width > 1244px) {
     body{
         .title-buttons .actions-bar-buttons{
             gap: 40px;
         }
     }
+}
+/* --- Window Modal ---*/
+#overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+/* Estilos básicos para el modal */
+#modal {
+    width: 40%;
+    border-radius: 6px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to right bottom, #fdf48a, rgb(245, 245, 245));
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.232);
+    padding: 20px;
+    z-index: 10;
+}
+
+/* Estilos adicionales para mejorar la apariencia del modal */
+#modal h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#modal label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#modal input,
+#modal textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#modal button {
+    background-color: #4CAF50;
+    border-radius: 3px;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+#modal button:last-child{
+    float: right;
+    background-color: #0d0d0d;
+    color: white;
+}
+#modal button:first-of-type:hover {
+    background-color: #62ff67;
+    box-shadow: 0px 0px 20px 3px #8dff91;
+}
+
+#listado-tareas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: calc(100vw - 250px);
+}
+
+.tarea-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.eliminar-icon{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #ff0000; /* Color rojo para el ícono de eliminar */
+}
+
+.editar-icon{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #1c1c1c;
 }
